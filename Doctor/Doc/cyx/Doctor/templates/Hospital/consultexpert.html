@@ -1,0 +1,27 @@
+{% extends 'Hospital/psuccess.html' %}
+
+{% block left-style %}
+
+#ename{
+font-size: 30px;
+}
+#einfo{
+
+}
+
+{% endblock %}}
+
+{% block left-side %}
+
+{%for expert in experts%}
+<a href="{{expert.id}}">
+    <div class="card" id="doctors">
+        <div class="row">
+            <div class="col" style="text-align: left" id="ename">{{expert.Name}}</div>
+            <div class="col" style="text-align: right" id="einfo">{{expert.Info}}</div>
+        </div>
+    </div>
+</a>
+{%endfor%}
+
+{% endblock %}

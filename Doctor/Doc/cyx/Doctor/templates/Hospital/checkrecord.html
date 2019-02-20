@@ -1,0 +1,46 @@
+{% extends 'Hospital/psuccess.html' %}
+{% block left-style %}
+
+    #warning{
+        font-size: 50px;
+        text-align: center;
+        padding-top: 300px;
+    }
+
+{% endblock %}
+
+
+{% block left-side %}
+
+{%for record in records%}
+
+<div class="card px-5">
+    <div class="row">
+        Time: {{record.Time}}
+    </div>
+    <div class="row">
+        Doctor: {{record.Doctor}}
+    </div>
+    <div class="row">
+        Department: {{register.Department}}
+    </div>
+    <div class="row">
+        Info: {{record.Info}}
+    </div>
+
+</div>
+{% empty %}
+<p id="warning" style="font-size: 50px">no record</p>
+{%endfor%}
+
+
+{% endblock %}
+
+
+<!--{%for record in records%}-->
+<!--<li>-->
+<!--{{record.Doctor}}&#45;&#45;{{record.Time}}&#45;&#45;{{record.Info}}&#45;&#45;{{record.Np}}&#45;&#45;{{record.Name}}&#45;&#45;{{record.Register.Time}}-->
+<!--</li>-->
+<!--{%empty%}-->
+<!--<h3>no record</h3>-->
+<!--{%endfor%}-->

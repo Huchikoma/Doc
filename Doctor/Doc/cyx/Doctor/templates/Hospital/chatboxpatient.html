@@ -1,0 +1,21 @@
+{%extends 'base.html' %}
+
+{% block main %}
+    <h3>chat</h3>
+<script type="text/javascript" src = "/static/js/chatboxpatient.js/"></script>
+
+
+<p id="a" >
+
+</p>
+
+<form action = "send/" method = "post">
+    {% csrf_token %}
+    Text <input type = "text" name = "text"/>
+    <hr/>
+    <input type ="submit" name = "send"/>
+</form>
+<a href="/consultexpert/">return to first page</a>
+    <!--jquery for patients-->
+
+{% endblock %}

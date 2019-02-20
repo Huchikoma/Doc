@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {%for blog in blogs%}
+        <li>
+            {{blog}}
+            <a href="{{blog.pk}}">view comments</a>
+        </li>
+        {%endfor%}
+    </ul>
+    <ul>
+        {%for title in titles%}
+        <li>
+            {{title}}
+            <a href="{{title.pk}}">view comments</a>
+        </li>
+        {%endfor%}
+    </ul>
+    <ul>
+        {%for comment in comments%}
+        <li>
+            {{comment.Blog}}
+            <a href="{{comment.Blog.pk}}">view comments</a>
+        </li>
+        {%endfor%}
+    </ul>
+`    <h3>{{value}}</h3>
+</body>
+</html>
